@@ -16,7 +16,7 @@
           "items": {
             "title":    "Quiz",//"<span class='label label-primary'>Image</span>",
             "type":     "object",
-            "minItems":  10,
+            "minItems":  2,
             "properties": {
               // "type": {
               //   "title": "Type of Question",
@@ -31,6 +31,7 @@
                 "title": "Possible Answers",
                 "type": "array",
                 "minItems":  2,
+                "maxItems":  6,
                 "properties": {
                   "answer": {
                     "title": "Answer here",
