@@ -1,0 +1,47 @@
+{
+  "name": "Text Quiz Blueprint",
+  "description": "Blueprint for creating a text based quiz.",
+  "instructions": "### Instructions\n Add as many questions and answers as needed.",
+  "type": "app",
+  "tags": ["Quiz"],
+  "thumbnail": "quiz-thumbnail.jpg",
+  "authors": ["Brian Anderson <brian@bitbyteyum.com>"],
+  "form": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "questions": {
+          "type": "array",
+          "title": "Questions",
+          "items": {
+            "title":    "Quiz",//"<span class='label label-primary'>Image</span>",
+            "type":     "object",
+            "minItems":  10,
+            "properties": {
+              // "type": {
+              //   "title": "Type of Question",
+              //   "type": "string",
+              //   "required": true
+              // },
+              "question": {
+                "title": "The question for this quiz",
+                "type": "string"
+              },
+              "answers": {
+                "title": "Possible Answers",
+                "type": "array",
+                "minItems":  2,
+                "properties": {
+                  "answer": {
+                    "title": "Answer here",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

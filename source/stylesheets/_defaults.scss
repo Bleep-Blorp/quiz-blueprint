@@ -1,0 +1,13 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: $page-base;
+  line-height: $page-line-height;
+  font-family: $ui-font;
+  font-weight: 300;
+}
+
+*::before,
+*::after { box-sizing: inherit; }
+
+* { box-sizing: border-box }

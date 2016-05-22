@@ -1,0 +1,90 @@
+.s-widget {
+  margin: ms(1) 0;
+  border-top:    1px solid $ultralight;
+  border-bottom: 1px solid $ultralight;
+  &.fullbleed {
+    @include nested-context(92%,center);
+    padding: 4%;
+  }
+  .text, .answers, .nav-dots {
+    display: table;
+    margin: 1rem auto 0;
+  }
+  .text-large {
+    font-size: ms(1);
+    line-height: 1.2;
+    max-width: 30;
+  }
+  .answers {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: $border-radius;
+    p {
+      margin: 0 auto 2rem;
+    }
+    span {
+      padding: 0 .2em;
+      border-radius: $border-radius;
+    }
+    &.correct {
+      background-color: mix($positive,$background,10%);
+      border: 1px solid $positive;
+      .button {
+        background-color: $positive;
+      }
+      span {
+        background-color: rgba($positive,.2);
+      }
+    }
+    &.incorrect {
+      background-color: mix($negative,$background,10%);
+      border: 1px solid $negative;
+      .button {
+        background-color: $negative;
+      }
+      span {
+        background-color: rgba($negative,.2);
+      }
+    }
+  }
+  a.button {
+    font-family: $ui-font;
+    font-weight: 400;
+    background: $primary;
+    color: #fff;
+    text-shadow: none;
+    margin: .1em;
+    padding: .3em .6em;
+    line-height: 1;
+    border-radius: $border-radius;
+    &:hover {
+      background-color: darken($primary, 5%);
+    }
+  }
+
+  a.nav-dots_dot {
+    background: $ultralight;
+    text-indent: 2em;
+    display: inline-block;
+    overflow: hidden;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 4px;
+    &.active {
+      background: $primary;
+    }
+  }
+
+  a.nav-arrows_left, a.nav-arrows_right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
+    background: none;
+  }
+  a.nav-arrows_left {
+    left: 0;
+  }
+}
